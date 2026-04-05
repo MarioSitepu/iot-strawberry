@@ -27,7 +27,7 @@ export function ChartSection({ data }: ChartSectionProps) {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} className="col-span-1">
         <Card className="h-full border-border/50 bg-background/60 backdrop-blur-xl">
           <CardHeader>
-            <CardTitle className="text-base font-semibold">PPM History</CardTitle>
+            <CardTitle className="text-base font-semibold">Riwayat PPM</CardTitle>
           </CardHeader>
           <CardContent className="h-[250px]">
             {renderChart(
@@ -57,7 +57,7 @@ export function ChartSection({ data }: ChartSectionProps) {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="col-span-1">
         <Card className="h-full border-border/50 bg-background/60 backdrop-blur-xl">
           <CardHeader>
-            <CardTitle className="text-base font-semibold">Temperature History</CardTitle>
+            <CardTitle className="text-base font-semibold">Riwayat Suhu</CardTitle>
           </CardHeader>
           <CardContent className="h-[250px]">
             {renderChart(
@@ -98,7 +98,7 @@ export function ChartSection({ data }: ChartSectionProps) {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="col-span-1 md:col-span-2 lg:col-span-1">
         <Card className="h-full border-border/50 bg-background/60 backdrop-blur-xl">
           <CardHeader>
-            <CardTitle className="text-base font-semibold">Humidity History</CardTitle>
+            <CardTitle className="text-base font-semibold">Riwayat Kelembaban</CardTitle>
           </CardHeader>
           <CardContent className="h-[250px]">
             {renderChart(

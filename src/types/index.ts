@@ -11,4 +11,4 @@ export interface SensorData {
   timestamp: string;
 }
 
-export type SystemStatus = "Normal" | "Warning" | "Danger";
+export type SystemStatus = "Normal" | "Peringatan" | "Bahaya";

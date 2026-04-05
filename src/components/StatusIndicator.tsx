@@ -14,13 +14,13 @@ export function StatusIndicator({ status, message }: StatusIndicatorProps) {
       bg: "bg-green-500/10",
       border: "border-green-500/20",
     },
-    Warning: {
+    Peringatan: {
       icon: AlertCircle,
       color: "text-yellow-500",
       bg: "bg-yellow-500/10",
       border: "border-yellow-500/20",
     },
-    Danger: {
+    Bahaya: {
       icon: XCircle,
       color: "text-red-500",
       bg: "bg-red-500/10",
@@ -34,7 +34,7 @@ export function StatusIndicator({ status, message }: StatusIndicatorProps) {
     <div className={`flex items-center gap-3 rounded-lg border px-4 py-3 ${bg} ${border}`}>
       <Icon className={`h-5 w-5 ${color}`} />
       <div>
-        <h4 className={`font-medium ${color}`}>System Status: {status}</h4>
+        <h4 className={`font-medium ${color}`}>Status Sistem: {status}</h4>
         {message && <p className="text-sm text-muted-foreground">{message}</p>}
       </div>
     </div>

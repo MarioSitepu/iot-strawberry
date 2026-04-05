@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LucideIcon, TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { SystemStatus } from "@/types";
 import { motion } from "motion/react";
 
 interface MonitoringCardProps {
@@ -8,7 +9,7 @@ interface MonitoringCardProps {
   value: string | number;
   unit: string;
   icon: LucideIcon;
-  status: "Normal" | "Warning" | "Danger";
+  status: SystemStatus;
   trend?: number;
   delay?: number;
 }
@@ -16,20 +17,20 @@ interface MonitoringCardProps {
 export function MonitoringCard({ title, value, unit, icon: Icon, status, trend = 0, delay = 0 }: MonitoringCardProps) {
   const statusColor = {
     Normal: "success",
-    Warning: "warning",
-    Danger: "destructive",
+    Peringatan: "warning",
+    Bahaya: "destructive",
   } as const;
 
   const iconColor = {
     Normal: "text-emerald-500 bg-emerald-500/10",
-    Warning: "text-amber-500 bg-amber-500/10",
-    Danger: "text-rose-500 bg-rose-500/10",
+    Peringatan: "text-amber-500 bg-amber-500/10",
+    Bahaya: "text-rose-500 bg-rose-500/10",
   };
 
   const glowColor = {
     Normal: "bg-emerald-500/10",
-    Warning: "bg-amber-500/10",
-    Danger: "bg-rose-500/10",
+    Peringatan: "bg-amber-500/10",
+    Bahaya: "bg-rose-500/10",
   };
 
   const isPositiveTrend = trend > 0;
@@ -79,7 +80,7 @@ export function MonitoringCard({ title, value, unit, icon: Icon, status, trend =
                     0.0
                   </span>
                 )}
-                <span className="text-muted-foreground">vs last 1m</span>
+                <span className="text-muted-foreground">vs 1m terakhir</span>
               </div>
               <Badge variant={statusColor[status]} className="shadow-sm">{status}</Badge>
             </div>
